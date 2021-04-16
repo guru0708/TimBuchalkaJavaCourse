@@ -1,11 +1,6 @@
 package com.gurparshad;
 
-import com.gurparshad.model.Artist;
 import com.gurparshad.model.Datasource;
-import com.gurparshad.model.SongArtist;
-
-import java.util.List;
-import java.util.Scanner;
 
 public class Main {
 
@@ -57,23 +52,25 @@ public class Main {
 
 //        datasource.createViewForSongArtists();
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("Please input your query title-: ");
+//
+//        String query = scanner.nextLine();
+//
+//        List<SongArtist> songArtists = datasource.querySongInfoView(query);
+//
+//        if(songArtists == null) {
+//            System.out.println("No corresponding song found");
+//            return;
+//        }
+//
+//        for(SongArtist artist : songArtists) {
+//            System.out.println("Artist: " + artist.getArtistName() + " , Album: " + artist.getAlbumName() +
+//                    " , Track: " + artist.getTrack() + " , Title: " + artist.getTitle());
+//        }
 
-        System.out.println("Please input your query title-: ");
-
-        String query = scanner.nextLine();
-
-        List<SongArtist> songArtists = datasource.querySongInfoView(query);
-
-        if(songArtists == null) {
-            System.out.println("No corresponding song found");
-            return;
-        }
-
-        for(SongArtist artist : songArtists) {
-            System.out.println("Artist: " + artist.getArtistName() + " , Album: " + artist.getAlbumName() +
-                    " , Track: " + artist.getTrack() + " , Title: " + artist.getTitle());
-        }
+        datasource.insertSong("Paranoid Android", "Radiohead", "OK Computer", 2);
 
         datasource.close();
     }
