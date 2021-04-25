@@ -1,4 +1,4 @@
-package com.gurparshad.model;
+package sample.model;
 
 public class Album {
     private int id;
